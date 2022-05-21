@@ -44,5 +44,13 @@ This is a chatting, meeting and dating website for the Geek Community. At the en
 
 <br />
 
+## Lighthouse of the website (21/05/2022)
+<div align="center">
+
+<img src="lighthouse.png" alt=github>
+
+
+<br />
+
 ----
 <div align="center">Link to the <a href="https://saphido.github.io/GetUrGeek/" target="_blank">github page</a></div>
