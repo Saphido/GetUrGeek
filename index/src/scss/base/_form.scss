@@ -16,6 +16,11 @@
     justify-content: center;
     align-items: center;
     gap: 15rem;
+
+    @include desktop-fr {
+        flex-direction: column;
+        gap: 3rem;
+    }
 }
 
 /* THIRD BLOCK (Totally free !) */
@@ -30,4 +35,8 @@
         gap: 0;
     }
 
+    @include desktop-fr {
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
 }

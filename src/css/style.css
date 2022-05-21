@@ -23,6 +23,11 @@ html, body {
   /* For 1 rem = 10px */
   font-family: "Poppins", sans-serif;
 }
+@media screen and (max-width: 1050px) {
+  html, body {
+    font-size: 50%;
+  }
+}
 
 a, ul {
   text-decoration: none;
@@ -75,6 +80,11 @@ a, ul {
     gap: 5rem;
   }
 }
+@media screen and (max-width: 880px) {
+  .header__button__list {
+    gap: 2rem;
+  }
+}
 
 /* FOOTER */
 .footer {
@@ -104,14 +114,26 @@ a, ul {
 }
 
 /* IMPORT HEADER STYLE */
+/* HEADER CLASSIC NAVBAR */
 .header {
   width: 100%;
   height: 13.9rem;
   margin: 0 auto;
 }
+@media screen and (max-width: 780px) {
+  .header {
+    margin-left: 19rem;
+  }
+}
 .header__logo {
   position: absolute;
   top: 0;
+  left: 45%;
+}
+@media screen and (max-width: 1050px) {
+  .header__logo {
+    width: 13rem;
+  }
 }
 .header__nav__links {
   font-weight: 700;
@@ -122,6 +144,20 @@ a, ul {
 .header__nav__links#active {
   padding-bottom: 1rem;
   border-bottom: 3px solid #030271;
+}
+@media screen and (max-width: 780px) {
+  .header__nav {
+    display: none;
+  }
+}
+.header__button {
+  position: relative;
+  left: 18%;
+}
+@media screen and (max-width: 880px) {
+  .header__button {
+    left: 14%;
+  }
 }
 .header__button__action {
   width: 13rem;
@@ -134,7 +170,129 @@ a, ul {
   font-size: 1.4rem;
   text-align: center;
 }
+@media screen and (max-width: 780px) {
+  .header__button {
+    display: none;
+  }
+}
 
+/* HEADER HAMBURGER MENU */
+#menuToggle {
+  display: none;
+}
+
+@media screen and (max-width: 780px) {
+  #menuToggle {
+    display: block;
+    position: relative;
+    top: 0.3rem;
+    right: 85rem;
+    z-index: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    color: #333333;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+  }
+
+  #menuToggle a:hover {
+    color: #0072C0;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+  }
+
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #0072C0;
+    border-radius: 3px;
+    z-index: 1;
+    -webkit-transform-origin: 4px 0px;
+            transform-origin: 4px 0px;
+    -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menuToggle span:first-child {
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    -webkit-transform: rotate(45deg) translate(-2px, -1px);
+            transform: rotate(45deg) translate(-2px, -1px);
+    background: #0072C0;
+  }
+
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+            transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    -webkit-transform: rotate(-45deg) translate(0, -1px);
+            transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  #menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: white;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+
+  #menuToggle input:checked ~ ul {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
 /* IMPORT INDEX STYLE */
 /* FIRST BLOCK (What is GetUrGeek) */
 .whatis-block {
@@ -172,6 +330,15 @@ a, ul {
           align-items: center;
   gap: 15rem;
 }
+@media screen and (max-width: 880px) {
+  .passions-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 3rem;
+  }
+}
 
 /* THIRD BLOCK (Totally free !) */
 .free-block {
@@ -193,6 +360,15 @@ a, ul {
 @media screen and (max-width: 1200px) {
   .free-block {
     gap: 0;
+  }
+}
+@media screen and (max-width: 880px) {
+  .free-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 3rem;
   }
 }
 
@@ -363,6 +539,16 @@ a, ul {
   background-position: center;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 880px) {
+  .whatis-block {
+    margin-bottom: -13rem;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .whatis-block__textarea {
+    margin-left: 10rem;
+  }
+}
 .whatis-block__textarea__title {
   width: 26.5rem;
   height: 11.6rem;
@@ -399,6 +585,16 @@ a, ul {
     width: 80%;
   }
 }
+@media screen and (max-width: 1050px) {
+  .whatis-block__imagearea__image {
+    width: 38rem;
+  }
+}
+@media screen and (max-width: 880px) {
+  .whatis-block__imagearea__image {
+    margin-right: 10rem;
+  }
+}
 
 .passions-block {
   width: 100%;
@@ -418,6 +614,13 @@ a, ul {
     width: 40rem;
   }
 }
+@media screen and (max-width: 880px) {
+  .passions-block__textarea__title {
+    width: 70rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
 .passions-block__textarea__text {
   width: 46.9rem;
   font-weight: 400;
@@ -430,6 +633,12 @@ a, ul {
     width: 35rem;
   }
 }
+@media screen and (max-width: 880px) {
+  .passions-block__textarea__text {
+    width: 80rem;
+    text-align: center;
+  }
+}
 
 .free-block {
   width: 100%;
@@ -437,6 +646,12 @@ a, ul {
 .free-block__imagearea__image {
   width: 90%;
   margin-top: 10rem;
+}
+@media screen and (max-width: 880px) {
+  .free-block__imagearea__image {
+    width: 80%;
+    margin-left: 6rem;
+  }
 }
 .free-block__textarea__title {
   width: 22.6rem;
@@ -447,12 +662,25 @@ a, ul {
           background-clip: text;
   color: transparent;
 }
+@media screen and (max-width: 880px) {
+  .free-block__textarea__title {
+    width: 70rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
 .free-block__textarea__text {
   width: 46.9rem;
   font-weight: 400;
   font-size: 2rem;
   line-height: 4rem;
   color: #333333;
+}
+@media screen and (max-width: 880px) {
+  .free-block__textarea__text {
+    width: 80rem;
+    text-align: center;
+  }
 }
 
 /* IMPORT FOOTER STYLE */

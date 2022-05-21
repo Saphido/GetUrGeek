@@ -23,3 +23,9 @@
         @content;
     }
 }
+
+@mixin tablet-st {
+    @media screen and (max-width: #{$tablet-st}) {
+        @content;
+    }
+}

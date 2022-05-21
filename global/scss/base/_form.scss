@@ -13,7 +13,6 @@
             flex-direction: row;
             align-items: center;
             gap: 10rem;
-
         }
     }
 
@@ -28,6 +27,10 @@
 
             @include desktop-st {
                 gap: 5rem;
+            }
+
+            @include desktop-fr {
+                gap: 2rem;
             }
         }
     }
