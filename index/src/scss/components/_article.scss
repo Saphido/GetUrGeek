@@ -1,0 +1,63 @@
+/* First block | What is GetUrGeek */
+.whatis-block {
+    width: 100%;
+    height: 75rem;
+    margin-bottom: 10rem;
+    background: url("../../index/src/img/whatis-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &__textarea {
+
+        &__title {
+            width: 26.5rem;
+            height: 11.6rem;
+
+            font-weight: 400;
+            font-size: 4rem;
+            color: $whatis-title;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        &__text {
+            width: 39.9rem;
+            height: 21rem;
+            margin: 1.5rem 0 3.5rem 0;
+
+            font-weight: 400;
+            font-size: 2.4rem;
+            line-height: 3.5rem;
+            color: $whatis-title;
+
+        }
+
+        &__button {
+            width: 13.6rem;
+            height: 5.4rem;
+
+            background: $whatis-button-bg;
+            border-radius: 100px;
+            border: none;
+
+
+            font-weight: 700;
+            font-size: 1.4rem;
+            text-align: center;
+            color: $whatis-button;
+        }
+    }
+
+    &__imagearea {
+        
+        &__image {
+            
+            width: 90%;
+
+            @include desktop-st {
+                
+                width: 80%;
+            }
+        }
+    }    
+}

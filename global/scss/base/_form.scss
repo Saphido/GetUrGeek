@@ -1,0 +1,52 @@
+/* HEADER */
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    &__nav {
+
+        &__list {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10rem;
+
+        }
+    }
+
+    &__button {
+
+        &__list {
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 7rem;
+
+            @include desktop-st {
+                gap: 5rem;
+            }
+        }
+    }
+}
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    &__nav {
+
+        &__list {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+        }
+    }
+}

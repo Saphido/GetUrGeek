@@ -1,0 +1,25 @@
+/* BREAKPOINTS */
+
+@mixin desktop-st {
+    @media screen and (max-width: #{$desktop-st}) {
+      @content;
+    }
+  }
+
+@mixin desktop-sd {
+    @media screen and (max-width: #{$desktop-sd}) {
+        @content;
+    }
+}
+
+@mixin desktop-th {
+    @media screen and (max-width: #{$desktop-th}) {
+        @content;
+    }
+}
+
+@mixin desktop-fr {
+    @media screen and (max-width: #{$desktop-fr}) {
+        @content;
+    }
+}

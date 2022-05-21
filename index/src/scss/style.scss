@@ -1,0 +1,19 @@
+@import "../../../global/scss/abstracts/fonts";
+@import "../../../global/scss/abstracts/mixin";
+@import "../../../global/scss/abstracts/variables";
+@import "../../../global/scss/base/init";
+@import "../../../global/scss/base/form";
+
+
+/* IMPORT HEADER STYLE */
+@import "../../../global/scss/components/header";
+
+/* IMPORT INDEX STYLE */
+@import "../../../index/src/scss/base/form";
+@import "../../../index/src/scss/components/login-form";
+@import "../../../index/src/scss/components/article";
+@import "../../../index/src/scss/components/section";
+
+/* IMPORT FOOTER STYLE */
+
+@import "../../../global/scss/components/footer";

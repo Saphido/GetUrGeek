@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Script to open & close forms-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous">
+    </script>
+
+    <!-- Login form -->
+    <script>
+    function openLogin() {
+        $("#login").hide().fadeIn(1000);
+        
+    //close the POPUP if the button with id="close" is clicked
+
+        $("#closeLogin").on("click", function (e) {
+            e.preventDefault();
+            $("#login").fadeOut(1000);
+        });
+    };
+    </script>
+
+    <!-- Register form -->
+
+    <script>
+        function openRegister() {
+            $("#register").hide().fadeIn(1000);
+            
+        //close the POPUP if the button with id="close" is clicked
+    
+            $("#closeRegister").on("click", function (e) {
+                e.preventDefault();
+                $("#register").fadeOut(1000);
+            });
+        };
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>GetUrGeek - Home</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="main-header header">
+        <nav class="header__nav">
+            <ul class="header__nav__list">
+                <li class="header__nav__items"><a class="header__nav__links" id="active" href="index.html">Home</a></li>
+                <li class="header__nav__items"><a class="header__nav__links" href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <a href="index.html"><img class="header__logo" src="global/img/logo_header.png" alt="Get Ur Geek Logo"></a>
+        <div class="header__button">
+            <ul class="header__button__list">
+                <li class="header__button__items"><button class="header__button__action" onclick="openLogin()">Login</button></li>
+                <li class="header__button__items"><button class="header__button__action" onclick="openRegister()">Register</button></li>
+            </ul>
+    </header>
+
+    <main>
+        <!-- LOGIN POPUP | Hidden by default -->
+        <div class="popup_overlay" id="login">
+            <div class="popup">
+                <div class="popup-content"> 
+                    <h3 class="popup__title">Welcome back !</h3>
+                    <p class="popup__text">Kindly fill in your login details to proceed</p>
+                    <form class="popup__form">
+                        <input class="popup__form__input" type="email" placeholder="Email">
+                        <input class="popup__form__input" type="password" placeholder="Password">
+                    </form>
+                    <p class="popup__text__forgot"><a href="#">I forgot my password ?</a></p>
+                    <div class="popup__buttonarea">
+                    <button class="popup__buttonarea__button">LOGIN</button>
+                    <button class="popup__buttonarea__button" id="closeLogin">BACK</button>
+                    </div>
+                    <p class="popup__text__signup"> Don't have an account yet ? <a class="popup__link__signup" href="#">Sign up</a></p>
+                </div>
+            </div>
+          </div>
+
+        <!-- REGISTER POPUP | Hidden by default -->
+        <div class="popup_overlay" id="register">
+            <div class="popup">
+                <div class="popup-content"> 
+                    <h3 class="popup__title">Sign up</h3>
+                    <p class="popup__text">It's totally free and it will always be</p>
+                    <form class="popup__form">
+                        <input class="popup__form__input" type="text" placeholder="Pseudo">
+                        <input class="popup__form__input" type="email" placeholder="Email">
+                        <input class="popup__form__input" type="password" placeholder="Password">
+                        <input class="popup__form__input" type="password" placeholder="Confirm Password">
+                    </form>
+                    <div class="popup__buttonarea">
+                    <button class="popup__buttonarea__button">SIGN UP</button>
+                    <button class="popup__buttonarea__button" id="closeRegister">BACK</button>
+                    </div>
+                    <p class="popup__text__signup"> Already a member ? <a class="popup__link__signup" href="#">Login</a></p>
+                </div>
+            </div>
+          </div>
+        
+        <!-- First block | What is GetUrGeek -->
+        <article class="whatis-block">
+            <div class="whatis-block__textarea">
+                <h1 class="whatis-block__textarea__title">What is <span style="font-weight: bold;">GetUrGeek</span> ?</h1>
+                <p class="whatis-block__textarea__text">Simply, the first free chatting, meeting and dating site for the Geek community. 
+                    Let’s create your account and join us, it’s totally free and no subscription needed to message each others.
+                </p>
+                <button class="whatis-block__textarea__button" onclick="openRegister()">Register</button>
+            </div>
+            <div class="whatis-block__imagearea">
+                <figure><img class="whatis-block__imagearea__image" src="index/src/img/WhatIs.png" alt="Geek and Geeky talking together"></figure>
+            </div>
+        </article>
+
+        <!-- Second block | Find someone with the same passions -->
+        <section class="main-section">
+
+            <div class="passions-block">
+                <div class="passions-block__imagearea">
+                    <figure><img class="passions-block__imagearea__image" src="index/src/img/Passions.png" alt="Gamepad and cinema tickets"></figure>
+                </div>
+                <div class="passions-block__textarea">
+                    <h3 class="passions-block__textarea__title">Find someone with the same passions</h3>
+                    <p class="passions-block__textarea__text">Do you like video games ? Cosplay ? Anime ? Or something else ? You will probably 
+                        find someone with the same hobbies. Complete your profile with all the things you like and let us make for you a selection 
+                        of our best profile.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Third block | Totally free ! -->
+
+            <div class="free-block">
+                <div class="free-block__textarea">
+                    <h3 class="free-block__textarea__title">Totally free !</h3>
+                    <p class="free-block__textarea__text">Our website is totally free to use but we also need to pay the server where it is hosted. 
+                        That’s why we need to have some ads on our site. We know it is annoying sometimes, but to garentee a long life to this platform 
+                        we don’t have the choice, so please, disable your adblocker on our website.
+                    </p>
+                </div>
+                <div class="free-block__imagearea">
+                    <figure><img class="free-block__imagearea__image" src="index/src/img/Free.png" alt="Shield with hand and money, representing AD Blockers"></figure>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="main-footer footer">
+        <div class="footer__logo--center">
+            <figure><img class="footer__logo" src="global/img/logo_footer.png" alt="GetUrGeek Logo"></figure>
+        </div>
+        <nav class="footer__nav">
+            <ul class="footer__nav__list">
+                <li class="footer__nav__items"><a class="footer__nav__links" href="#"><i class="footer__nav__ico fa-brands fa-discord fa-4x"></i></a></li>
+                <li class="footer__nav__items"><a class="footer__nav__links" href="#"><i class="footer__nav__ico fa-brands fa-facebook fa-4x"></i></a></li>
+                <li class="footer__nav__items"><a class="footer__nav__links" href="#"><i class="footer__nav__ico fa-brands fa-twitter fa-4x"></i></a></li>
+                <li class="footer__nav__items"><a class="footer__nav__links" href="#"><i class="footer__nav__ico fa-brands fa-instagram fa-4x"></i></a></li>
+            </ul>
+        </nav>
+        <div class="footer__copyright">
+            <p class="footer__copyright__text">
+                COPYRIGHT © 2022 GETURGEEK TOUS DROITS RÉSERVÉS
+                CONCEPTION : SAPHIDO - DESIGN: SAPHIDO - MLLEYUUMI
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
