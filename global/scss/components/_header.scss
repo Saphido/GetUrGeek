@@ -6,7 +6,7 @@
     margin: 0 auto;
 
     @include tablet-st {
-        margin-left: 19rem;
+        margin-left: 20%;
     }
 
     &__logo {
@@ -16,6 +16,14 @@
 
         @include desktop-th {
             width: 13rem;
+        }
+
+        @include tablet-st {
+            left: 43vw;
+        }
+
+        @include phone-st {
+            left: 38.5vw;
         }
     }
 
@@ -79,12 +87,16 @@
     display: block;
     position: relative;
     top: 0.3rem;
-    right: 85rem;
+    right: 88vw;
     
     z-index: 1;
     
     -webkit-user-select: none;
     user-select: none;
+
+    @include phone-st {
+        right: 80vw;
+    }
     }
     
     #menuToggle a

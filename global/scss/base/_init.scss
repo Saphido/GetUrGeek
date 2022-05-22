@@ -18,6 +18,14 @@ html, body {
 	@include desktop-th {
 		font-size: 50%;
 	}
+
+	@include tablet-sd {
+		font-size: 45%;
+	}
+
+	@include phone-st {
+		font-size: 40%;
+	}
 }
 
 a, ul {

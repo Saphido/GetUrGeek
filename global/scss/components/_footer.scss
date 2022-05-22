@@ -7,6 +7,14 @@
     background-position: center;
     background-repeat: no-repeat;
 
+    &__logo {
+
+        @include tablet-th {
+            width: 80%;
+            padding-left: 5rem;
+        }
+    }
+
     &__nav {
         margin-bottom: 1.5rem;
             &__ico {

@@ -12,10 +12,27 @@
         margin-bottom: -13rem;
     }
 
+    @include tablet-st {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 40rem;
+    }
+
     &__textarea {
 
         @include desktop-th {
             margin-left: 10rem;
+        }
+
+        @include tablet-st {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 45rem;
+            margin-right: 5.5rem;
         }
 
         &__title {
@@ -26,6 +43,11 @@
             font-size: 4rem;
             color: $whatis-title;
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+            @include tablet-st {
+                width: 48rem;
+                padding-left: 2rem;
+            }
         }
 
         &__text {
@@ -37,6 +59,18 @@
             font-size: 2.4rem;
             line-height: 3.5rem;
             color: $whatis-title;
+
+            @include tablet-st {
+                width: 75rem;
+                text-align: center;
+                padding-right: 2.5rem;
+                margin-top: -3.5rem;
+            }
+
+            @include tablet-th {
+                width: 50rem;
+                margin-bottom: 9rem;
+            }
 
         }
 
@@ -53,10 +87,16 @@
             font-size: 1.4rem;
             text-align: center;
             color: $whatis-button;
+
+            @include tablet-st {
+                margin-top: -5rem;
+                margin-right: 2rem;
+            }
         }
     }
 
     &__imagearea {
+
         
         &__image {
             
@@ -74,6 +114,10 @@
 
             @include desktop-fr {
                 margin-right: 10rem;
+            }
+
+            @include tablet-st {
+                display: none;
             }
         }
     }    

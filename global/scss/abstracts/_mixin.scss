@@ -29,3 +29,21 @@
         @content;
     }
 }
+
+@mixin tablet-sd {
+    @media screen and (max-width: #{$tablet-sd}) {
+        @content;
+    }
+}
+
+@mixin tablet-th {
+    @media screen and (max-width: #{$tablet-th}) {
+        @content;
+    }
+}
+
+@mixin phone-st {
+    @media screen and (max-width: #{$phone-st}) {
+        @content;
+    }
+}
